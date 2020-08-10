@@ -2,7 +2,7 @@
 
 def valid_move? (board, index)
   index = index.to_i
-  withinrange = (index > 0 && index < 8)
+  withinrange = (index >= 0 && index <= 8)
   nottaken = !position_taken?(board, index)
 
   if (withinrange && nottaken)
